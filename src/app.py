@@ -2,10 +2,8 @@ from flask import Flask, jsonify, request, Response
 import base64
 import jwt
 
-
 app = Flask(__name__)
 app.config['JSON_AS_ASCII'] = False
-
 
 with open(".secrets") as f:
     SECRETS = f.read().rstrip()
